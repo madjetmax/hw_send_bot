@@ -13,9 +13,15 @@ import database
 import scheduler
 import user, admin
 from bot_data import bot_data
+from aiogram.client.session.aiohttp import AiohttpSession
+from aiogram.client.telegram import TelegramAPIServer
 
 
-bot = Bot(token=BOT_TOKEN)
+session = AiohttpSession(
+    api=TelegramAPIServer.from_base('http://0.0.0.0:9000')
+)
+
+bot = Bot(token=BOT_TOKEN, session=session)
 dp = Dispatcher()
 
 
