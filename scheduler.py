@@ -19,7 +19,7 @@ async def send_home_work(bot: Bot):
                 if bool(user.send_home_work_daily) and home_work:
                     await bot.send_message(user.id, f"Home work on {next_day[1]} {next_day[0]}")
                     for hm in home_work:
-                        await bot.send_message(user.id, f"{hm.get("subject")}: {hm.get("task")}")
+                        await bot.send_message(user.id, f"{hm.get('subject')}: {hm.get('task')}")
             except Exception:
                 pass
 
