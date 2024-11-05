@@ -96,7 +96,7 @@ async def callback(call: CallbackQuery, state: FSMContext):
         if home_work:
             await call.message.answer(f"Home work on {day} {date}")
             for hm in home_work:
-                await call.message.answer(f"{hm.get("subject")}: {hm.get("task")}")
+                await call.message.answer(f"{hm.get('subject')}: {hm.get('task')}")
         else:
             await call.message.answer(f"No home work on {day} {date}")
     
