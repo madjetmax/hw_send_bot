@@ -2,3 +2,4 @@ aiogram==3.13.1
 aiosqlite==0.20.0
 sqlalchemy==2.0.35
 cachetools==5.5.0
+apscheduler==3.10.4
